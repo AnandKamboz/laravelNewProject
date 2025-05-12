@@ -13,15 +13,52 @@
     <link id="theme-style" rel="stylesheet" href="{{ asset('/admin/portal.css') }}">
     <style>
         .container {
-          max-width: 1270px;
+            max-width: 1270px;
         }
+
+        .loader-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 9999;
+        }
+
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 5px solid #00f;
+            border-bottom: 5px solid #00f;
+            width: 70px;
+            height: 70px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
     </style>
+
+z
 </head>
 <body class="app">
-    {{-- <header class="app-header fixed-top" style="background-color:#edfdf6"> --}}
-            <header class="app-header fixed-top">
+    {{-- loader --}}
+    <div class="loader-main d-none">
+        <div class="loader"></div>
+    </div>
+    {{-- loader --}}
 
-
+    <header class="app-header fixed-top">
         <div class="app-header-inner">
             <div class="container-fluid py-2">
                 <div class="app-header-content">
@@ -36,9 +73,9 @@
                             </a>
                         </div>
 
-                        <div class="app-search-box col" >
+                        <div class="app-search-box col">
                             <form class="app-search-form">
-                               <h5 style="">Cash Awards Manegment System</h5>
+                                <h5 style="">Cash Awards Manegment System</h5>
                             </form>
                         </div>
 
@@ -166,8 +203,7 @@
     <script src="{{ asset('/admin/chart.min.js') }}"></script>
     <script src="{{ asset('/admin/index-charts.js') }}"></script>
     <script src="{{ asset('/admin/app.js') }}"></script>
-    </body>
-    </html>
 </body>
 </html>
-
+</body>
+</html>
