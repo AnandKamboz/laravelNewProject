@@ -43,7 +43,8 @@
                             </div>
                         </form>
                         <div class="auth-option text-center pt-5 text-link">Application for Cash Award
-                            <a class="text-link" href="signup.html">here</a>.
+                            <a class="text-link" href="{{ route('ppp.details') }}">here</a>.
+
                         </div>
                     </div>
                     <!--//auth-form-container-->
